@@ -27,6 +27,7 @@
 function my_new_contactmethods( $contactmethods ) {
     //add committee Email
     $contactmethods['committeemail'] = 'Committee Email';
+$contactmethods['committeemail2'] = 'Secondary Committee Email';
     //add committee Position
     $contactmethods['committeerole'] = 'Committee Position';
     //add Current degree
@@ -159,4 +160,26 @@ add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
 
 function do_the_excerpt(){
 
+}
+
+
+/* Author List */
+function contributors() {
+	global $wpdb;
+
+	$authors = $wpdb->get_results("SELECT ID, user_nicename from $wpdb->users ORDER BY display_name");
+	foreach($authors as $author) {
+		if ( !(get_the_author_meta('user_level', $author->ID) >= 3 )) {
+			continue;
+		}
+		echo '<div class="img">';
+		echo '<div class="desc">';
+		echo "<a href=\"".get_author_posts_url($author->ID)."\">";
+		the_author_meta('display_name', $author->ID);
+		echo "</a></div>";
+		echo "<a href=\"".get_author_posts_url($author->ID)."\">";
+		echo get_avatar($author->ID);
+		echo "</a>";
+		echo '</div>';
+	}
 }

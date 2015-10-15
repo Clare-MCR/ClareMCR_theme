@@ -13,7 +13,7 @@ Version: 1.4.5
 @import url('../hueman/style.css');
 
 p {text-align: justify;}
-
+b {font-weight: bold;} 
 .anchor {
     position:relative;
     top:-75px; /* or whatever value you need */
@@ -26,6 +26,23 @@ p {text-align: justify;}
 .widget {color: #474343;}
 .entry.excerpt {color: #525252;}
 .post-list .post, .post-list .page {width: 100%;}
+
+/* category description */
+.category .notebox {
+	font-family: Titillium, Arial, sans-serif;
+	font-kerning: auto;
+	font-size: 16px;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-variant-ligatures: normal;
+	font-weight: normal;
+	text-transform: none;
+}
+
+.category .notebox:before{
+	top:0;
+}
 
 /* Related post img size */
 ul.related-posts img {
@@ -106,6 +123,7 @@ background-size:110%;
    -moz-transition: opacity .25s ease-in-out;
    -webkit-transition: opacity .25s ease-in-out;
 }
+#puntsbooker {border: 0; padding: 10px 0 0 10px;}
 
 /* --- MCR Bar --- */
 div#fb-mcr-bar {padding-bottom: 30px;width:100%;text-align:center}
@@ -128,6 +146,7 @@ div#fb-mcr-bar {display:none;}}
 
 /* --- forum --- */
 
+p.bbp-topic-meta {text-align: center;}
 p.bbp-forum-description img {display: none;}
 span.bbp-topic-started-by img {display: none;}
 span.bbp-topic-freshness-author img {display: none;}
@@ -135,8 +154,15 @@ p.bbp-topic-description img {display: none;}
 .bbp-breadcrumb {padding-right: 10px;}
 #bbpress-forums .status-closed, #bbpress-forums .status-closed a {color: #848080;}
 #bbpress-forums .sticky, #bbpress-forums .sticky a {color: black;}
+li.bbp-topic-revision-log-item img {display: none;}
 
 /* --- no image slider on small screen --- */
 @media only screen and  (max-width: 700px) {
 .headerslider {display: none;}
+#puntsbooker {border: 0;padding:0;}
+}
+
+/* --- sportspress --- */
+.sp-data-table tbody, .sp-calendar tbody {
+	color: rgb(102, 102, 102);
 }

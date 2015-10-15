@@ -22,14 +22,15 @@
 				<?php if (get_the_author_meta( 'user_url' ) ): ?>
 					<h2>Website:</h2><a class="bio-url" href="<?php the_author_meta('user_url'); ?>"><?php the_author_meta('user_url'); ?></a>
 				<?php endif; ?>
-				<?php if (get_the_author_meta( 'twitter' ) || get_the_author_meta( 'facebook' ) || get_the_author_meta( 'linkedin' ) || get_the_author_meta( 'user_email' )): ?>
+				<?php if (get_the_author_meta( 'twitter' ) || get_the_author_meta( 'facebook' ) || get_the_author_meta( 'linkedin' ) || get_the_author_meta( 'committeemail' )): ?>
 					<h2>Social Links:</h2>
 				<?php endif; ?>
 				
-<?php if (get_the_author_meta( 'committeemail' ) ): ?>
+				<?php if (get_the_author_meta( 'committeemail' ) ): ?>
 					<a class="bio-social" href="mailto:<?php the_author_meta('committeemail'); ?>"><img src="http://icons.iconarchive.com/icons/zerode/plump/256/Mail-icon.png" alt="Email" style="height:15px" border="0"></a>
-<?php elseif (get_the_author_meta( 'user_email' ) ): ?>
-					<a class="bio-social" href="mailto:<?php the_author_meta('user_email'); ?>"><img src="http://icons.iconarchive.com/icons/zerode/plump/256/Mail-icon.png" alt="Email" style="height:15px" border="0"></a>
+					<?php if (get_the_author_meta( 'committeemail2' ) ): ?>
+						<a class="bio-social" href="mailto:<?php the_author_meta('committeemail2'); ?>"><img src="http://icons.iconarchive.com/icons/zerode/plump/256/Mail-icon.png" alt="Email" style="height:15px" border="0"></a>			
+					<?php endif; ?>
 				<?php endif; ?>
 				<?php if (get_the_author_meta( 'twitter' ) ): ?>
 					<a class="bio-social" href="https://www.twitter.com/<?php the_author_meta('twitter'); ?>"><img src="https://g.twimg.com/Twitter_logo_blue.png" alt="View twitter profile" style="height:15px" border="0"></a>
