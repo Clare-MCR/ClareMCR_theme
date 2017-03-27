@@ -209,3 +209,23 @@ function configure_tinymce($in) {
   }";
   return $in;
 }
+
+
+ add_filter('login_redirect', 'my_login_redirect', 10, 3);
+ function my_login_redirect() {
+ $location = $_SERVER['HTTP_REFERER'];
+ wp_safe_redirect($location);
+ exit();
+ }
+
+/**
+ * //--- Default MCR Bulletin featured image
+ * function dfi_category ( $dfi_id, $post_id ) {
+ *   // all which have 'animals' as a category
+ *   if ( has_category( 'mcr-bulletin', $post_id ) ) {
+ *     return 4862; // default bulletin picture
+ *   }
+ *   return $dfi_id; // the original featured image id
+ * }
+ * add_filter( 'dfi_thumbnail_id', 'dfi_category', 10, 2 );
+ */

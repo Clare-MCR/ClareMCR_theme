@@ -50,11 +50,11 @@
 					</div><!--/#header-ads-->
 					<?php endif; ?>
 					<ul id="booking_system_links">
-						<li id="link_punts"><a href="<?php echo home_url() ?>/punts-booker">Punts<br/>Booker</a></li>
+						<li id="link_punts"><a href="http://punts.clare.cam.ac.uk">Punts<br/>Booker</a></li>
 						<li id="link_events"><a href="<?php echo home_url() ?>/events-booker">Events<br/>Booker</a></li>
 					</ul><br>
 				</div>
-				<div class="headerslider"> <?php echo do_shortcode('[smartslider2 slider="2"]'); ?></div>
+				<div class="headerslider"> <?php echo do_shortcode('[smartslider2 slider="1"]'); ?></div>
 
 				<?php endif; ?>
 				<?php if ( ot_get_option('header-image') ): ?>

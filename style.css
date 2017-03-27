@@ -50,6 +50,10 @@ max-height: 10%;
 max-width: 10%;
 }
 
+ol.alpha {
+	list-style-type: lower-alpha;
+}
+
 /* Center footer */
 .footer-widget-1 {
 	margin-left: auto;
