@@ -211,12 +211,24 @@ function configure_tinymce($in) {
 }
 
 
- add_filter('login_redirect', 'my_login_redirect', 10, 3);
- function my_login_redirect() {
- $location = $_SERVER['HTTP_REFERER'];
- wp_safe_redirect($location);
- exit();
- }
+if (!function_exists('write_log')) {
+    function write_log ( $log )  {
+        if ( true === WP_DEBUG ) {
+            if ( is_array( $log ) || is_object( $log ) ) {
+                error_log( print_r( $log, true ) );
+            } else {
+                error_log( $log );
+            }
+        }
+    }
+}
+
+// add_filter('login_redirect', 'my_login_redirect', 10, 3);
+// function my_login_redirect() {
+// $location = $_SERVER['HTTP_REFERER'];
+// wp_safe_redirect($location);
+// exit();
+// }
 
 /**
  * //--- Default MCR Bulletin featured image
