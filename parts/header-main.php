@@ -67,7 +67,7 @@ $header_classes = array(
                 </div>
 
                 <div id="header-image-wrap">
-                    <div class="headerslider"> <?php echo do_shortcode('[smartslider2 slider="1"]'); ?></div>
+                    <div class="headerslider"> <?php echo do_shortcode("[huge_it_slider id='4']"); ?></div>
                 </div>
 
             <?php if ( hu_is_header_nav_displayed() ) : ?>
