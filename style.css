@@ -43,6 +43,12 @@ b {font-weight: bold;}
 .category .notebox:before{
 	top:0;
 }
+/* Featured Image Image post size and position */
+.image-container img {
+    width: auto;
+    max-height: 320px;
+    margin: 0 auto;
+}
 
 /* Related post img size */
 ul.related-posts img {
